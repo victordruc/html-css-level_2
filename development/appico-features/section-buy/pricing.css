@@ -1,0 +1,163 @@
+/*
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+body {
+    margin: 200px 0;
+}
+
+.pricing {
+    padding: 100px 0;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.pricing header {
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+.pricing header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.pricing header h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #777;
+}
+
+.pricing .price {
+    display: inline-block;
+    width: 22%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    margin-right: 25px;
+}
+
+.pricing .price:last-of-type {
+    margin-right: 0;
+}
+
+.pricing .buy {
+    height: 166px;
+    padding: 20px 0;
+    margin: 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.pricing .buy h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.pricing .buy h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.pricing .buy h4 span {
+    font-size: 16px;
+}
+
+.pricing .buy p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #777;
+    margin-top: 20px;
+}
+
+.pricing .price ul {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    margin: 40px 0;
+}
+
+.pricing .price li::before {
+    content: "\2713";
+    color: #25d25e;
+    font-weight: 800;
+    padding: 0 10px 0 15px;
+}
+
+.pricing .price li {
+    margin-bottom: 18px;
+}
+
+.pricing .price a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #005bea;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 45px;
+    padding: 0px 25px;
+    border-radius: 50px;
+    margin: 0 0 60px 20px;
+    transition: 0.5s;
+}
+
+/*---------------------Shadow box------------------------*/
+
+.pricing .price a:hover{
+    box-shadow: 0 18px 28px 0 #DFDFDF;
+}
+
+.pricing .price:nth-of-type(2) a:hover{
+    box-shadow: 0 18px 28px 0 #004FCC;
+}
+
+/*---------------END------------------------------------------*/
+
+/* Second different div */
+
+.container .price:nth-of-type(2) {
+    background-color: #005bea;
+    box-shadow: 0 18px 28px 0 #E0E0E0;
+    border: 1px solid #005bea;
+}
+
+.container .price:nth-of-type(2) .buy>* {
+    color: white;
+}
+
+.container .price:nth-of-type(2) li {
+    color: white;
+}
+
+.container .price:nth-of-type(2) a {
+    background-color: white;
+    color: #333;
+}
+
+/* ---------END------------ */
+
+/* Custom Domain different simbol */
+
+.container .price:first-of-type ul li:last-child::before{
+    content: "\2716";
+    color: red;
+}
+
+/*--------------End----------------------*/
