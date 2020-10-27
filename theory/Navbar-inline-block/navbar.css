@@ -1,0 +1,47 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #333;
+}
+
+.navbar {
+    background-color: #555;
+    text-align: right;
+    box-shadow: 0 10px 20px #111;
+}
+
+.navbar li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    
+}
+
+.navbar a {
+    color: white;
+    
+}
+
+.navbar a:hover {
+    text-shadow: 2px 2px 1px white;
+}
+
+.navbar a::after{
+    content: "";
+    display: block;
+    border-bottom: 1px solid transparent;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+
+.navbar a:hover::after {
+    border-bottom-color: white;
+    transform: translateX(0);
+    
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image-Shadow</title>
+    <style>
+        body {
+            background-color: #333333;
+        }
+        .shadow {
+            border: 5px solid white;
+            display: inline-block;
+            padding: 10px;
+            line-height: 0; /*Cu ajutorul line-height*/
+            position: relative;
+        }
+        .shadow::after {
+            content: "";
+            /*background-color: orange;*/
+            display: block;
+            width: 400px;
+            height: 600px;
+            position: absolute;
+            top: 10px;
+            background-image: linear-gradient(black, transparent, black);
+        }
+    </style>
+</head>
+<body>
+
+    <figure class="shadow">
+        <img src="https://i.pinimg.com/originals/a0/1f/3b/a01f3bc2e0caba45885c667a116fa874.jpg" alt="fall">
+    </figure>
+    
+</body>
+</html>
