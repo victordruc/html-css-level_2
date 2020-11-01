@@ -1,0 +1,72 @@
+body {
+    background-image: url(paper.png);
+    background-repeat: repeat;
+}
+
+.paper-effect {
+    width: 1000px;
+    height: 600px;
+    border: 10px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    perspective: 1000px;
+}
+
+.paper-effect > div {
+    /*border: 1px solid black;*/
+    width: 198px;
+    height: 598px;
+    float: left;
+    background-image: url(fall.jpg);
+    transition: 1s;
+}
+
+
+.paper-effect>div:nth-child(2) {
+    background-position: -200px 0;
+}
+
+.paper-effect>div:nth-child(3) {
+
+    background-position: -400px 0;  
+}
+
+.paper-effect>div:nth-child(4) {
+    background-position: -600px 0;
+}
+
+.paper-effect>div:nth-child(5) {
+    background-position: -800px 0;
+}
+
+/*  Hover efect  */
+
+.paper-effect:hover>div:nth-child(2) {
+    background: linear-gradient(to right, transparent, black 380%), url(fall.jpg);
+    background-position: -200px 0;
+    transform: translateX(-50px) rotateY(-45deg) scaleY(1.07);
+}
+
+.paper-effect:hover>div:nth-child(3) {
+    background: linear-gradient(to bottom right, transparent, black 180%), linear-gradient(to top right, transparent, black 180%), url(fall.jpg);
+    background-position: -400px 0;
+    transform: translateX(-108px) rotateY(45deg) scaleY(1.07);
+   
+}
+
+.paper-effect:hover>div:nth-child(4) {
+    background: linear-gradient(to bottom left, transparent, black 180%), linear-gradient(to top left, transparent, black 180%), url(fall.jpg);
+    background-position: -594px 0;
+    transform: translateX(-169px) rotateY(-45deg) scaleY(1.07);
+}
+
+.paper-effect:hover>div:nth-child(5) {
+    background: linear-gradient(to left, transparent, black 180%), url(fall.jpg);
+    background-position: -796px 0;
+    transform: translateX(-227px) rotateY(45deg) scaleY(1.07);
+}
+
