@@ -1,0 +1,20 @@
+body{
+    background-color: #333;
+    margin:0;
+}
+
+.widget{
+    width: 20vmin;
+    height: 20vmin;
+    margin: 40vmin auto;
+
+    background-color: green;
+}
+/* 
+Raspunsuri: 
+1. Cunoscind ca 1vh = 1% din inaltimea ecranului, rezulta, daca modificam formatul ecranului se modifica si inaltimea lui,
+reesind ca si dimensiunile figurii noastre.
+
+2. Vom utiliza vmin, deoarece initial inaltimea ecranului este mai mica, rotind ecranul la 90grade, figura va ramine de aceeasi
+dimensiune deoarece parte cu dimensiuni mai mici ramine neschimbata.
+*/

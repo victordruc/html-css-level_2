@@ -1,0 +1,42 @@
+body {
+    font-family: 'Manjari', sans-serif;
+    background-color: #111112;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+#cross-menu {
+    width: 410px;
+    margin: 50px auto;
+}
+
+#cross-menu ul>li {
+    background-color: #306BA8;
+    padding: 42px;
+    width: 210px;
+    float: left;
+    border-bottom: 1px solid #275586;
+}
+
+#cross-menu ul li:first-child {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    height: 443px;
+    width: 25px !important;
+    font-size: 36px;
+    color: #103D62;
+    border-right: 1px solid #275586;
+}
+
+#cross-menu ul li:nth-child(3) {
+    background-color: #275586;
+}
+
+#cross-menu ul li:nth-child(3) i{
+    padding-left: 80px;
+}
