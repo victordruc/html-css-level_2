@@ -1,0 +1,296 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 200px 0;
+}
+
+.features {
+    background-color: #e7e7e7;
+    padding: 100px 0;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.features header {
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+.features header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #444;
+    padding-bottom: 20px;
+}
+
+.features header h2 {
+    color: #777;
+}
+
+.features .row>* {
+    display: inline-block;
+    width: 33%;
+    vertical-align: middle;
+}
+
+.features .row > img {
+    width: 25%;
+    margin: 0 4%;
+    animation: up-down 5s infinite;
+}
+
+.features .row > ul:first-child {
+    text-align: right;
+}
+
+.features .row h3 {
+    font-size: 19px;
+    padding: 15px 20px;
+    font-weight: 700;
+    color: #444;
+}
+
+/*----------Parameter for left border--------------*/
+
+.features .row > ul:first-child li p {
+    padding: 20px 10px 20px 20px;
+    color: #777;
+    border: 2px solid #eee;
+    border-right: none;
+    transition: 0.5s;
+    line-height: 25px;
+    height: 175px;      
+}
+
+.features ul:first-child li:hover p {
+    border-color: #005bea;   
+}
+
+/*----------End--------------*/
+
+/*----------Parameter for right border--------------*/
+
+.features .row > ul:last-child li p {
+    padding: 20px 10px 20px 10px;
+    color: #777;
+    border: 2px solid #eee;
+    border-left: none;
+    transition: 0.5s;
+    line-height: 25px;
+    height: 175px;     
+}
+
+.features ul:last-child li:hover p {
+    border-color: #005bea;   
+}
+
+/*----------End--------------*/
+
+.features li:hover svg {
+    fill: white;
+}
+
+.features li::after {
+    content: "";
+    background-color: #e7e7e7;
+    display: block;
+    transform: translateY(-52px);
+    width: 100%;
+    height: 20px;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+
+.features ul:first-child li:hover::after {
+    width: 40%;
+    margin-left: 60%;
+}
+
+.features ul:last-child li:hover::after {
+    width: 40%;
+}
+
+/*-------Position Icon for left side section------------*/
+
+.features ul:first-child .icon {
+    transform: translateY(-240px) translateX(364px);
+    background-color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+    /*float: right;*/
+    text-align: center;
+    line-height: 60px;
+    transition: 0.5s;
+}
+
+/*----------------------End-----------------------*/
+
+/*-------Position Icon for right side section------------*/
+
+.features ul:last-child .icon {
+    transform: translateY(-240px) translateX(-40px);
+    background-color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+    /*float: right;*/
+    text-align: center;
+    line-height: 60px;
+    transition: 0.5s;
+}
+
+/*----------------------End-----------------------*/
+
+.features li .icon:hover {
+    background-color: #005bea;
+}
+
+.features li:hover .icon {
+    background-color: #005bea;
+}
+
+.features li .icon:hover svg {
+    fill: white;
+}
+
+.features li {
+    margin-bottom: -50px;
+}
+
+@keyframes up-down {
+    0%{ transform: translateY(-50px); }
+    50%{ transform: translateY(50px); }
+    100%{ transform: translateY(-50px); }
+}
+
+/*----------------Adaptive----------------------------*/
+
+@media (max-width: 1160px) and (min-width: 991px){
+    .container {
+        width: 900px;
+    }
+    .features .row > ul:last-child li p {
+        height: 230px;
+    }
+    .features .row > ul:first-child li p {
+        height: 230px;
+    }
+    .features ul:last-child .icon {
+        transform: translateY(-294px) translateX(-40px);
+    }
+    .features ul:first-child .icon {
+        transform: translateY(-294px) translateX(294px);
+    }
+    .features .row h3 {
+        height: 2em;
+    }
+}
+
+@media (max-width: 990px) and (min-width: 829px){
+    .container {
+        width: 810px;
+    }
+    .features .row > img {
+        display: none;
+    }
+    .features .row>* {
+        width: 40%;
+    }
+    .features .row> ul:first-child {
+        margin-right: 16%;
+    }
+    .features ul:first-child .icon {
+        transform: translateY(-240px) translateX(316px);
+    }
+}
+
+@media (max-width: 828px) {
+    .container {
+        width: 580px;
+    }
+    .features header h1 {
+        font-size: 20px;
+    }
+    .features header h2 {
+        font-size: 12px;
+    }
+    .features .row h3 {
+        font-size: 14px;
+    }
+    .features .row p {
+        font-size: 12px;
+    }
+    .features .row > img {
+        display: none;
+    }
+    .features .row > ul:first-child {
+        text-align: left;
+    }
+    .features .container .row>ul {
+        display: block;
+        width: 500px;
+        margin: auto;
+    }
+    .features ul:first-child .icon {
+        transform: translateY(-166px) translateX(-40px);
+    }
+    .features ul:last-child .icon {
+        transform: translateY(-166px) translateX(-40px);
+    }
+    .features .row > ul:first-child li p {
+        border-right: 2px solid #eee;
+        border-left: none;
+    }
+    .features ul:first-child li:hover p {
+        border-color: #005bea;   
+    }
+    .features .row > ul:last-child li p {
+        height: 100px;
+    }
+    .features .row > ul:first-child li p {
+        height: 100px;
+    }
+    .features ul:first-child li:hover::after {
+        margin-left: 0;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        width: 80%;
+    }
+    .features .container .row > ul {
+        width: 80%;
+    }
+    .features .row > ul:first-child li {
+        width: 100%;
+    }
+    .features .row > ul:last-child li p {
+        height: 175px;
+    }
+    .features .row > ul:first-child li p {
+        height: 175px;
+    }
+    .features ul:first-child .icon {
+        transform: translateY(-240px) translateX(-40px);
+    }
+    .features ul:last-child .icon {
+        transform: translateY(-240px) translateX(-40px);
+    }
+}
+@media (max-width: 410px) {
+    .features .row > ul:last-child li p {
+        height: 225px;
+    }
+    .features .row > ul:first-child li p {
+        height: 225px;
+    }
+    .features ul:first-child .icon {
+        transform: translateY(-290px) translateX(-40px);
+    }
+    .features ul:last-child .icon {
+        transform: translateY(-290px) translateX(-40px);
+    }
+}
