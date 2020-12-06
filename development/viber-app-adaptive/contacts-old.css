@@ -1,0 +1,442 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #4D49BF;
+
+    /* Design Palette */
+    --Melrose: #B5B0D9;
+    --FreeSpeechBlue: #4D49BF;
+    --MediumSlateBlueD: #6863F2;
+    --MediumSlateBlueL: #9C99F2;
+    --WhiteSmoke: #F2F2F2;
+    --DarkGrey: #333;
+    --DarkSilver: #555;
+    --PictonBlue: #39C4E5;
+
+    /* --Height: 3200px;
+    --Width: 1440px; */
+
+    /* --Height: 1280px;
+    --Width: 720px; */
+
+    --Height: 1136px;
+    --Width: 640px;
+}
+
+/*.mockPhone {
+    background-color: var(--MediumSlateBlueD);
+    transform: scale(0.8);
+    display: inline-block;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: -10px 10px 10px var(--MediumSlateBlueD), 2px 0 10px var(--MediumSlateBlueD);
+    background-image: linear-gradient(to right, var(--FreeSpeechBlue) ,var(--MediumSlateBlueD) 10%, var(--MediumSlateBlueD) 80%, var(--FreeSpeechBlue));
+}
+
+  .mockPhone .screen {
+    width: var(--Width);
+    height: var(--Height);
+    border: 1px solid var(--DarkGrey);
+}
+*/
+#viber-app {
+    background-color: var(--WhiteSmoke);
+    width: 100%;
+    height: 100vh;
+}
+
+#viber-app header{
+    height: 80px;
+    width: 100%;
+    /* position: absolute; */
+    background-color: var(--WhiteSmoke);
+    
+}
+
+#viber-app section {
+    height: 86%;
+    width: 100%;
+    background-color: var(--WhiteSmoke);
+    /* position: relative; */
+    top: 7%;
+}
+
+#viber-app footer {
+    height: 7%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--WhiteSmoke);
+    bottom: 0;
+}
+
+#viber-app .contacts {
+    height: 100%;
+    overflow-y: scroll;
+    /* scroll-snap-type: y mandatory; */
+   
+}
+
+#viber-app .contacts::-webkit-scrollbar {
+    background-color: var(--WhiteSmoke); 
+    width: 10px;
+    position: fixed;
+    display: none;
+}
+
+#viber-app .contacts::-webkit-scrollbar-thumb {
+    background-color: var(--DarkSilver);
+}
+
+#viber-app .contacts:hover::-webkit-scrollbar,
+#viber-app .contacts:active::-webkit-scrollbar {
+    display: block;
+}
+
+#viber-app .contacts li {
+    height: calc(100% / 7.6);
+    border-top: 1px solid var(--DarkSilver);
+    border-bottom: 1px solid var(--DarkSilver);
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
+/* Dialog */
+
+.contacts li a {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+}
+
+.contacts .dialog {
+    width: 85%;
+}
+
+.contacts li a>div {
+    display: table-cell;
+    /* border: 2px solid red; */
+}
+
+.contacts li a .dialog img {
+    /* width: 14%; */
+    height: 80%;
+    position: absolute;
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.contacts li a .dialog h2,
+.contacts li a .dialog p {
+    margin-left: 150px;
+    margin-top: 16px;
+}
+
+.contacts li a .dialog h2 {
+    font-weight: 700;
+    font-size: 1.8em;
+    color: black;
+}
+
+.contacts li a .dialog p {
+    font-size: 1.6em;
+    color: var(--DarkSilver);
+    text-align: justify;
+}
+
+.contacts li a .dialog p:last-child {
+    margin-top: 1%;
+}
+
+/* ------End Dialog ---------- */
+
+/* Data */
+
+.contacts .data .status {
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    right: 75px;
+    color: var(--MediumSlateBlueD);
+}
+
+.contacts .data .time {
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    right: 25px;
+    color: var(--DarkSilver);
+}
+
+.contacts .data .count {
+    padding: 0.8em;
+    line-height: 0;
+    position: absolute;
+    top: 30%;
+    right: 25px;
+    background-color: var(--MediumSlateBlueD);
+    color: white;
+    border-radius: 1em;
+}
+
+/* ------End Data ---------- */
+
+/* Edit Child */
+
+.contacts li:nth-child(3) .data .status,
+.contacts li:nth-child(4) .data .status,
+.contacts li:nth-child(7) .data .status {
+    color: var(--DarkSilver);
+}
+
+.contacts li:nth-child(4) .data .count {
+    background-color: var(--DarkSilver);
+}
+
+.contacts li:nth-child(6) .dialog h2 i {
+    color: var(--PictonBlue);
+}
+
+/* ------- End edit child ---------- */
+
+/* Footer */
+
+#viber-app footer div {
+    display: inline-block;
+    height: 100%;
+    width: 32%;
+    text-align: center;
+    font-size: 2em;
+}
+
+#viber-app footer div i,
+#viber-app footer div p {
+    vertical-align: middle;
+    line-height: 1.2em;
+}
+
+#viber-app footer .calls,
+#viber-app footer .more {
+    color: var(--DarkSilver);
+}
+
+#viber-app footer .chats {
+    color: var(--MediumSlateBlueD);
+    position: relative;
+}
+#viber-app footer .chats p:last-child {
+    position: absolute;
+    top: 5px;
+    right: calc( 100vw / 9);
+    color: white;
+    background-color: var(--PictonBlue);
+    font-size: 0.5em;
+    padding: 0.1em 0.5em;
+    border-radius: 100%;
+}
+
+/* -----End footer----------- */
+
+/* Header */
+
+#viber-app header .info {
+    width: 100%;
+    height: 30%;
+    text-align: right;
+    padding-top: 8px;
+    margin-left: -25px;
+    color: var(--DarkSilver);
+}
+
+#viber-app header .viber,
+#viber-app header .search {
+    display: inline-block;
+    width: 100%;
+    height: 70%;
+    font-size: 2em;
+}
+
+#viber-app header .viber h1{
+    font-weight: 700;
+    padding-left: 25px;
+    float: left;
+}
+
+#viber-app header .viber a{
+    padding-right: 25px;
+    float: right;
+    color: var(--MediumSlateBlueD);
+}
+
+/* End header */
+
+/* Menu */
+
+.mockPhone .screen .menu {
+    position: absolute;
+    font-size: 3em;
+    background-color: var(--MediumSlateBlueD);
+    bottom: 10%;
+    right: 30px;
+    padding: 0.4em;
+    border-radius: 100%;
+}
+
+.mockPhone .screen .menu a {
+    color: white;
+}
+
+/* End menu */
+
+/* Adaptive */
+
+@media (orientation: landscape) {
+    #viber-app .contacts li {
+        height: calc(100% / 4);
+    }
+    #viber-app header,
+    #viber-app footer {
+        height: 80px;
+    }
+}
+
+@media (orientation: landscape) and (min-aspect-ratio: 16/10) {
+    #viber-app .contacts li {
+        height: calc(100% / 2.7);
+    }
+}
+
+@media (min-width: 960px) {
+    .contacts li a .dialog p {
+        font-size: 1.3em;
+    }
+    .contacts li a .dialog h2 {
+        font-size: 2.2em;
+    }
+    .contacts li a .dialog h2,
+    .contacts li a .dialog p {
+    margin-left: 180px;
+    margin-top: 14px;
+}
+}
+
+@media (max-width: 630px) {
+
+.contacts li a .dialog h2,
+.contacts li a .dialog p {
+    margin-left: 90px;
+    margin-top: 6px;
+}
+
+.contacts li a .dialog h2 {
+    font-weight: 700;
+    font-size: 1.0em;
+}
+
+.contacts li a .dialog p {
+    font-size: 0.8em;
+}
+
+.contacts li a .dialog img {
+    height: 50px;
+    width: 50px;
+}
+
+.contacts .data .status {
+    top: 10%;
+    right: 60px;
+}
+
+.contacts .data .time {
+    top: 10%;
+    right: 25px;
+    font-size: 0.8em;
+}
+
+.contacts .data .count {
+    font-size: 0.9em;
+    padding: 0.5em;
+    line-height: 0;
+    top: 40%;
+    right: 25px;
+}
+#viber-app header,
+#viber-app footer {
+    height: 80px;
+    font-size: 1em;
+}
+#viber-app footer div {
+    font-size: 1em;
+}
+.mockPhone .screen .menu {
+    font-size: 1.5em;
+    bottom: 18%;
+    right: 25px;
+    padding: 0.4em;
+    border-radius: 100%; 
+}
+}
+
+@media (max-width: 330px) {
+    .contacts li a .dialog h2 {
+        font-size: 0.8em;
+    }
+    
+    .contacts li a .dialog p {
+        font-size: 0.65em;
+    }
+}
+
+@media (max-height: 540px) {
+    .mockPhone .screen .menu {
+        font-size: 2em;
+        bottom: 28%;
+        right: 25px;
+        padding: 0.4em;
+        border-radius: 100%;  
+    } 
+}
+
+@media (min-width: 1280px) {
+    .contacts li a .dialog h2,
+    .contacts li a .dialog p {
+        margin-left: 250px;
+        margin-top: 16px;
+    }
+    
+    .contacts li a .dialog h2 {
+        font-weight: 700;
+        font-size: 3em;
+    }
+    
+    .contacts li a .dialog p {
+        font-size: 3em;
+    }
+    
+    .contacts li a .dialog img {
+        height: 200px;
+        width: 200px;
+    }
+    .contacts .data .status {
+        top: 10%;
+        right: 120px;
+        font-size: 2em;
+    }
+    
+    .contacts .data .time {
+        top: 10%;
+        right: 25px;
+        font-size: 2em;
+    }
+    
+    .contacts .data .count {
+        font-size: 2em;
+        padding: 0.8em;
+        top: 30%;
+}
+.mockPhone .screen .menu {
+    bottom: 18%;
+} 
+}
