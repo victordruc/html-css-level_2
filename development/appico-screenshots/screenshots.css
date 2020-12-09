@@ -1,0 +1,160 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 200px 0;
+    background-color: white;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.container header {
+   margin: 20px 0;
+}
+
+.container header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+.container header h2 {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 50px;
+}
+
+.screenshots {
+    text-align: center;
+}
+
+.screenshots .g-carousel img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.screenshots .g-carousel img {
+    transform: scale(0.6);
+    opacity: 0.4;
+}
+
+.screenshots .g-carousel .slick-current+div img,
+.screenshots .g-carousel .slick-current+div+div+div img {
+    transform: scale(0.8);
+    opacity: 0.8;
+}
+
+.screenshots .g-carousel .slick-current+div img {
+    margin-left: -25px;
+}
+
+.screenshots .g-carousel .slick-current+div+div+div img {
+    margin-left: 25px;
+}
+
+.screenshots .g-carousel .slick-current+div+div img {
+    transform: scale(1.0);
+    opacity: 1;
+}
+
+
+.mobile-container {
+    position: relative;
+    padding: 50px;
+}
+
+.mobile-container .mobile {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 22%;
+    border-radius: 25px;
+    box-shadow: 4px 0 10px #c3c9ce,
+                -4px 0 10px #c3c9ce,
+                0 4px 4px #252627;
+}
+.mobile-container .mobile .screen {
+    width: 200px;
+    height: 358px;
+    background-color: white;
+    bottom: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 1px solid #e7e7e7;
+}
+
+.mobile-container .mobile .circle {
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    bottom: 200px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 100%;
+    border: 1px solid #c3c9ce;
+    box-shadow: 0 0 4px #c3c9ce;
+}
+
+.mobile-container .mobile .screen::before {
+    content: "";
+    width: 70px;
+    height: 8px;
+    background-color: #c3c9ce;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.mobile-container .mobile::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #c3c9ce;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    display: block;
+    border-radius: 100%;
+}
+.fa-angle-right {
+    font-size: 24px;
+    color: #c3c9ce;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.fa-angle-left {
+    font-size: 24px;
+    color: #c3c9ce;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.fa-angle-right:hover, .fa-angle-left:hover {
+    color: #8095D4;
+}
