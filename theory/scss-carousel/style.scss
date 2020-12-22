@@ -1,0 +1,107 @@
+$colorDark: #333;
+$colorLight: orange;
+$sizeW: 800px;
+$sizeH: 600px;
+$thickness: 5px;
+$numberSlide: 3; // declararea numerelor de sliduri
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $colorDark;
+    @include reset;
+}
+
+.carousel {
+    width: $sizeW;
+    height: $sizeH;
+    border: $thickness solid lighten($colorDark, 30%);
+    color: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    .slide {
+        position: absolute;
+        
+        @for $childSlide from 1 through $numberSlide {
+
+            &:nth-child(#{$childSlide}) {
+                >div {
+                    background-image: url(slide-#{$childSlide}.jpg);
+                }
+            }
+        }
+
+        // &:nth-child(1) {
+        //     >div {
+        //         background-image: url(slide-1.jpg);
+        //     }
+        // }
+
+        // &:nth-child(2) {
+        //     >div {
+        //         background-image: url(slide-2.jpg);
+        //     }
+        // }
+
+        // border: 1px solid green;
+        width: inherit;
+        height: inherit;
+
+        @for $child from 1 through $numberSlide {
+            &:nth-child(#{$child})>div {
+                box-sizing: border-box;
+                width: $sizeW / 8;
+                height: $sizeH / 6;
+                // border: 1px solid red;
+                float: left;
+
+                @for $y from 0 through 5 {
+                    @for $x from 0 through 7 {
+                        &:nth-child(#{$y * 8 + $x + 1}) {
+
+                            background-position-x: $x * - $sizeW / 8;
+                            background-position-y: $y * - $sizeH / 6;
+                            // opacity: 0;
+                            // animation: effect-1 5s;
+                            // animation-fill-mode: forwards;
+                            // animation-delay: 0.5s * ($y + $x);
+
+                            transform: translateX(-2 * $sizeW) translateY(-2 * $sizeH) rotate(-1800deg);
+                            animation: effect-2 0.25s * random(5) 1;
+                            animation-fill-mode: forwards;
+                            animation-delay: 0.1s * random(10) + ($child - 1) * 2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes effect-1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes effect-2 {
+    from {
+        transform: translateX(-2 * $sizeW) translateY(-2 * $sizeH) rotate(-1800deg);
+    }
+
+    to {
+        transform: translateX(0) translateY(0) rotate(0);
+    }
+}
