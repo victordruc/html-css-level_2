@@ -1,0 +1,20 @@
+.header__navbar {
+    ul:nth-child(2) {
+        li {
+            position: relative;
+        a::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: $whiteColor;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            transition: 1s;
+        }
+        a:hover::after {
+            width: 86%;
+        }
+    }
+}
+}
