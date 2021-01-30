@@ -1,0 +1,436 @@
+// Fonts variable:
+$openSans: "Open Sans", sans-serif;
+$oswald: "Oswald", sans-serif;
+
+// Color
+$blackTranparent: rgba(0, 0, 0, 0.4);
+$yellow: #ffc400;
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.dgrid {
+  display: grid;
+}
+
+.dflex {
+  display: flex;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient($blackTranparent), url(images/intro_bkg.jpg);
+  background-size: cover;
+  grid-template: 60px 1fr / 8% 1fr 8%;
+}
+
+.page_header {
+  grid-column: 1 / -1;
+  width: 100vw;
+  .header_navbar {
+    height: 100%;
+    grid-template-columns: 8% 1fr 3fr 8%;
+    background-color: $blackTranparent;
+    align-content: center;
+    .header_brand {
+      font-size: 2em;
+      font-family: $openSans;
+      font-weight: 700;
+      color: white;
+      grid-column: 2 / 3;
+      &::first-letter {
+        color: $yellow;
+      }
+    }
+    .header_bars {
+      display: none;
+      font-size: 2em;
+      color: white;
+      grid-column: 3 / 4;
+      justify-self: end;
+    }
+  }
+
+  ul {
+    // display: none;
+    grid-column: 3 / 4;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    // li:first-child {
+    //     flex-grow: 20;
+    //     font-size: 2em;
+
+    //     &::first-letter {
+    //     color: $yellow;
+    //    }
+    //    &:hover {
+    //     color: white;
+    // }
+    // }
+    li {
+      color: white;
+      padding-left: 25px;
+      font-weight: 700;
+      font-family: $openSans;
+      font-size: 0.9em;
+      transition: 0.5s;
+      &:hover {
+        color: $yellow;
+      }
+      // &:last-child {
+      //     display: none;
+      //     font-size: 1.5em;
+      //     padding: 6px 4px;
+      //     border: 3px solid white;
+      //     text-align: center;
+      //     border-radius: 5px;
+      // }
+    }
+  }
+}
+
+.page_section {
+  grid-column: 2 / 3;
+  grid-row: 2;
+  // align-self: center;
+  color: white;
+  grid-template-columns: 1fr 400px;
+  grid-template-rows: 100px 1fr;
+
+  main {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  h1 {
+    font-family: $oswald;
+    font-weight: 700;
+    font-size: 5em;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-family: $oswald;
+    font-weight: 700;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+  }
+  p {
+    font-family: $openSans;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    margin-bottom: 20px;
+  }
+  a {
+    display: inline-block;
+    padding: 9px 18px;
+    background-color: $yellow;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: $openSans;
+    font-weight: 700;
+    transition: 0.5s;
+    &:hover {
+      background-color: darken($yellow, 10%);
+      color: white;
+    }
+    &:active {
+      box-shadow: inset 0 0 2px rgba(37, 35, 35, 0.75),
+        inset 0 0 4px rgba(37, 35, 35, 0.55),
+        inset 0 0 8px rgba(37, 35, 35, 0.35);
+    }
+  }
+
+  form {
+    grid-row: 2;
+    grid-column: 2;
+    background-color: $blackTranparent;
+    border-radius: 12px;
+    padding: 30px;
+    width: 380px;
+    height: 420px;
+    box-sizing: border-box;
+    fieldset {
+      text-align: center;
+      legend {
+        font-family: $oswald;
+        font-weight: 700;
+        font-size: 1.3em;
+        justify-self: center;
+        letter-spacing: 1px;
+      }
+      input {
+        width: 100%;
+        height: 40px;
+        font-family: $openSans;
+        transition: 0.5s;
+        margin-bottom: 10px;
+        &::placeholder {
+          padding-left: 10px;
+        }
+        &:focus {
+          outline: 1.5px solid $yellow;
+        }
+      }
+      p {
+        font-family: $openSans;
+        font-size: 0.9em;
+      }
+    }
+    button {
+      background-color: $yellow;
+      color: rgba(0, 0, 0, 0.6);
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      justify-self: center;
+      align-self: center;
+      font-family: $openSans;
+      font-weight: 700;
+      padding: 16px 22px;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        background-color: darken($yellow, 10%);
+        color: white;
+      }
+      &:active {
+        box-shadow: 0 0 2px 2px white;
+      }
+    }
+  }
+}
+
+// MENU------------------
+
+.menu {
+  position: fixed;
+  top: 70px;
+  left: -190px;
+  border: 1px solid black;
+  border-radius: 0 5px 5px 0;
+  background-color: #444444;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $openSans;
+  p {
+    font-weight: 700;
+    padding: 20px;
+  }
+  ul {
+    &:first-of-type {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        background-color: #303030;
+        font-size: 0.8em;
+        border-radius: 5px;
+        text-align: center;
+        transition: .5s;
+        &:hover {
+            background-color: $yellow;
+            color: #444444;
+        }
+      }
+    }
+    &:last-of-type {
+      display: flex;
+      li {
+        width: 30px;
+        height: 30px;
+        margin: 0 4px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:nth-child(1) {
+          background-color: #8cc052;
+          &:hover {
+            background-color: darken(#8cc052, 10%);
+          }
+        }
+        &:nth-child(2) {
+          background-color: #ed6f61;
+          &:hover {
+            background-color: darken(#ed6f61, 10%);
+          }
+        }
+        &:nth-child(3) {
+          background-color: #3cbea7;
+          &:hover {
+            background-color: darken(#3cbea7, 10%);
+          }
+        }
+        &:nth-child(4) {
+          background-color: #2da2c8;
+          &:hover {
+            background-color: darken(#2da2c8, 10%);
+          }
+        }
+      }
+    }
+  }
+  button {
+    margin: 16px 0;
+    background-color: $yellow;
+    color: rgba(0, 0, 0, 0.6);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.7em;
+    padding: 10px 22px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      background-color: darken($yellow, 10%);
+      color: white;
+    }
+    &:active {
+      box-shadow: 0 0 2px 2px white;
+    }
+  }
+  .iconMenu {
+      position: absolute;
+      right: -48px;
+      top: 16px;
+      padding: 10px;
+      font-size: 1.4em;
+      border-radius: 0 5px 5px 0;
+      background-color: $yellow;
+      transition: .5s;
+      &:hover {
+        background-color: darken($yellow, 10%);
+      }
+  }
+  transition: .5s;
+  &:target {
+      left: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .page {
+    height: auto;
+  }
+  .page_section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+
+    main {
+      grid-row: 2;
+      grid-column: 1;
+      text-align: center;
+    }
+    form {
+      grid-row: 3;
+      grid-column: 1;
+      margin-bottom: 20px;
+      justify-self: center;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header_navbar {
+    background-color: rgb(44, 40, 40) !important;
+    border-bottom: 2px white solid !important;
+    ul {
+      display: none;
+    }
+    .header_bars {
+      display: inline-block !important;
+    }
+    &:target ul {
+      display: block;
+      position: absolute;
+      width: 100%;
+      background-color: rgb(44, 40, 40);
+      text-align: center;
+      overflow: hidden;
+      animation: bars 2s forwards;
+      top: 62px;
+      li {
+        margin: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .page_section {
+    form {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 404px) {
+  .page {
+    // width: 100vw;
+    // height: 100vh;
+    // background: linear-gradient($blackTranparent), url(images/intro_bkg.jpg);
+    // background-size: cover;
+    grid-template: 60px 1fr / 100vw;
+  }
+  form {
+    width: 100% !important;
+    height: auto !important;
+    box-sizing: border-box;
+  }
+  .page_section {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 290px) {
+  h1 {
+    font-size: 2em !important;
+  }
+  h2 {
+    font-size: 1.2em !important;
+  }
+  p {
+    font-size: 1em !important;
+  }
+  .page_header {
+    .header_brand {
+      font-size: 1em !important;
+      align-self: center;
+    }
+    .header_bars {
+      font-size: 1em !important;
+      align-self: center;
+    }
+  }
+  .menu {
+      display: none;
+  }
+}
+
+@media (max-height: 580px) {
+  .page {
+    height: 100%;
+    padding-bottom: 80px;
+  }
+}
+
+@keyframes bars {
+  from {
+    height: 0;
+  }
+  to {
+    height: 300px;
+  }
+}
