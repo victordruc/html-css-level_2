@@ -18,9 +18,8 @@ a {
 .page {
   width: 100vw;
   height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url(images/intro_bkg.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.4)), url(images/intro_bkg.jpg);
-  background-size: cover;
+  background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 50%, transparent), url(images/intro_bkg.jpg);
+  background-size: 3px 3px, cover;
   -ms-grid-rows: 60px 1fr;
   -ms-grid-columns: 8% 1fr 8%;
       grid-template: 60px 1fr / 8% 1fr 8%;

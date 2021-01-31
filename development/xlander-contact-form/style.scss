@@ -23,8 +23,11 @@ a {
 .page {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient($blackTranparent), url(images/intro_bkg.jpg);
-  background-size: cover;
+  // background: linear-gradient($blackTranparent), url(images/intro_bkg.jpg);
+
+  background: radial-gradient($blackTranparent, $blackTranparent 50%, transparent), url(images/intro_bkg.jpg);
+
+  background-size: 3px 3px, cover;
   grid-template: 60px 1fr / 8% 1fr 8%;
 }
 
