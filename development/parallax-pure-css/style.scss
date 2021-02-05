@@ -1,0 +1,40 @@
+@import "_parallax.scss";
+@import "_header.scss";
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Open Sans", sans-serif;
+}
+
+.dflex {
+    display: flex;
+}
+
+// #croatia:target {
+//     left: 5vw;
+//     top: 0;
+// }
+
+@media (max-width: 1200px) {
+    .container section {
+        &:nth-of-type(5),
+        &:nth-of-type(7) {
+            left: 45vw;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .container section {
+        &:nth-of-type(5),
+        &:nth-of-type(7) {
+            left: 5vw;
+        }
+
+    }
+}

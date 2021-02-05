@@ -1,0 +1,84 @@
+@mixin styleSection {
+    div {
+        flex-direction: column;
+        width: 400px;
+        background-color: #95b9f8;
+        box-shadow: 2px 2px 5px #4284f7, -2px -2px 5px #bed4fa;
+        img {
+          align-self: center;
+        }
+        h2 {
+          font-weight: 700;
+          font-size: 1.2em;
+          text-align: center;
+          padding-top: 20px;
+        }
+        p {
+          text-align: center;
+          padding: 20px 10px;
+        }
+      }
+}
+
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1px;
+  overflow-x: hidden;
+  section {
+    height: 350vh;
+    width: 100vw;
+    position: absolute;
+
+    &:nth-of-type(1) {
+      transform: translateZ(-2px) scale(3);
+      background-image: url(./images/png_file/YellowRight.png),
+        url(./images/png_file/ScribbledAngelfishLeft.png),
+        url(./images/png_file/PacificBlueRight.png),
+        url(./images/png_file/PomacanthusBlueAngelfishLeft.png);
+      background-repeat: no-repeat;
+      background-position: right 160vh, left 160vh, 75% 150vh, 25% 150vh;
+      background-size: 30vh;
+      opacity: 0.6;
+      z-index: 10;
+    }
+    &:nth-of-type(2) {
+      transform: translateZ(-1px) scale(2);
+      background-image: url(./images/png_file/PacificBlueRight.png),
+        url(./images/png_file/PomacanthusBlueAngelfishLeft.png);
+      background-repeat: no-repeat;
+      background-position: right 130vh, left 130vh;
+      background-size: 30vh;
+      opacity: 0.6;
+      z-index: 10;
+    }
+    &:nth-of-type(3) {
+      transform: translateZ(-3px) scale(4);
+      background-image: url(./images/ocean.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &:nth-of-type(4) {
+        left: 5vw;
+      top: 250vh;
+      @include styleSection;
+    }
+    &:nth-of-type(5) {
+        left: 65vw;
+        top: 150vh;
+        @include styleSection;
+      }
+    &:nth-of-type(6) {
+        left: 5vw;
+        top: 50vh;
+        @include styleSection;
+      }
+    &:nth-of-type(7) {
+        left: 65vw;
+        top: 350vh;
+        @include styleSection;
+      }
+  }
+}

@@ -1,0 +1,22 @@
+.header {
+    padding: 20px 5%;
+    background-color: #c0d6fb92;
+    nav>a {
+        font-weight: 700;
+        font-size: 1.2em;
+        color: blue;
+    }
+    .header_navbar {
+            width: 100%;
+            justify-content: flex-end;
+        
+        li {
+            margin-left: 20px;
+            font-weight: 700;
+            transition: .3s;
+            &:hover {
+                color:blue;
+            }
+        }
+    }
+}
