@@ -1,0 +1,50 @@
+a:hover {
+    color: $bs-blue; 
+}
+
+.btn {
+    background-color: $bs-blue !important;
+    font-family: $font-family-raleway !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-raleway !important;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6{
+    color: $h-section-color !important;
+    font-weight: 600;
+}
+
+main p {
+    color: $p-section-color !important;
+    font-family: $font-family-source-sans-pro !important;
+}
+
+.form-control {
+    background-color: $black-color;
+    &:focus {
+        background-color: $black-color;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.blue-line {
+    width: 70px;
+    height: 1px;
+    background-color: $bs-blue;
+  }
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0 !important;
+}

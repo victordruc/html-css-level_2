@@ -1,0 +1,243 @@
+a:hover {
+  color: #008ed6;
+}
+
+.btn {
+  background-color: #008ed6 !important;
+  font-family: "Raleway", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif !important;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  color: #323232 !important;
+  font-weight: 600;
+}
+
+main p {
+  color: #727272 !important;
+  font-family: "Source Sans Pro", sans-serif !important;
+}
+
+.form-control {
+  background-color: #000;
+}
+
+.form-control:focus {
+  background-color: #000;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.blue-line {
+  width: 70px;
+  height: 1px;
+  background-color: #008ed6;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 0 !important;
+}
+
+.header {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6))), url(/images/bg-image-1.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6)), url(/images/bg-image-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 5em;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.navbar .navbar-brand img {
+  padding-left: 4px;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+  color: #008ed6;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #008ed6;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--bs-dark);
+}
+
+.header-social {
+  font-size: 1.5em;
+  padding: 4px;
+  color: #fff;
+}
+
+.header-text {
+  color: #fff;
+}
+
+.header-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header-text ul i {
+  color: #008ed6;
+  font-size: 1.5em;
+  margin-right: .5em;
+}
+
+.header-form {
+  padding: 30px 24px 60px 24px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header-form legend {
+  color: #fff;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.header-form button {
+  padding: 15px 30px;
+}
+
+.brief .brief-img {
+  width: 100%;
+}
+
+.brief i {
+  background-color: #008ed6;
+  color: #fff;
+}
+
+.brief h6 {
+  font-weight: 700;
+}
+
+.section-2 {
+  background-color: #f7f8fa;
+}
+
+.section-3 i {
+  color: #008ed6;
+  font-size: 3.1em;
+}
+
+.section-4 {
+  background-color: #f7f8fa;
+}
+
+.section-4 ul {
+  margin: 0;
+}
+
+.section-4 ul li {
+  color: #727272;
+}
+
+.section-4 .list-group > .list-group-item:first-of-type {
+  border-bottom: none;
+}
+
+.section-4 .list-group > .list-group-item:last-of-type {
+  border-top: none;
+}
+
+.section-4 .list-group-item {
+  padding: 12px 35px;
+}
+
+.section-4 .list-group-item .btn {
+  background-color: #fff !important;
+  padding: 7px 15px;
+}
+
+.section-4 .list-group-item .btn:hover {
+  color: #008ed6;
+  border-color: #008ed6;
+}
+
+.section-4 .list-pricing-top {
+  font-weight: 700;
+  background-color: #323232;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.section-4 .list-pricing-top h3 {
+  margin: 0;
+  color: #fff !important;
+  font-family: "Source Sans Pro", sans-serif !important;
+}
+
+.section-4 .list-pricing-top p {
+  margin: 0;
+  color: #fff !important;
+}
+
+.section-4 .list-pricing-top p span {
+  color: #008ed6;
+}
+
+.section-4 .list-pricing-center span {
+  color: #000;
+}
+
+.section-4 .list-pricing-bottom {
+  font-weight: 700;
+}
+
+.section-4 .list-2 .list-pricing-top {
+  background-color: #008ed6;
+}
+
+.section-4 .list-2 .list-pricing-top p span {
+  color: #fff;
+}
+
+.section-4 .list-2 .list-pricing-bottom {
+  font-weight: 700;
+}
+
+.section-4 .list-2 .list-pricing-bottom .btn {
+  background-color: #008ed6 !important;
+}
+
+.section-4 .list-2 .list-pricing-bottom .btn:hover {
+  color: #fff;
+  border-color: #008ed6;
+  background-color: #0186ca !important;
+}
+
+.section-5 li {
+  color: #323232;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.section-5 li i {
+  color: #008ed6;
+  margin-right: 4px;
+}
+/*# sourceMappingURL=style.css.map */

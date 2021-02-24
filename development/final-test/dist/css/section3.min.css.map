@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../scss-folder/section3.scss"
+    ],
+    "names": [],
+    "file": "section3.min.css"
+}
