@@ -1,0 +1,62 @@
+.section-7 {
+  --dimensionBoxImg: 52px;
+  .owl-dot {
+    outline: none !important;
+  }
+  .item {
+    p {
+      padding: 40px 20px;
+      background-color: $bg-section-color;
+      position: relative;
+      font-style: italic;
+      border-bottom: 1px $border-color solid;
+      &::after {
+        content: "";
+        background-color: $bg-section-color;
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: -15px;
+        transform: rotate(45deg);
+        border-bottom: 1px $border-color solid;
+        border-right: 1px $border-color solid;
+      }
+    }
+    .single-list {
+      position: relative;
+      margin-top: 50px;
+    }
+    .img-list {
+      width: var(--dimensionBoxImg);
+      height: var(--dimensionBoxImg);
+      background-color: $bg-section-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: calc(var(--dimensionBoxImg) / 2 * -1);
+      z-index: 2;
+      img {
+        width: calc(var(--dimensionBoxImg) - 6px);
+        height: calc(var(--dimensionBoxImg) - 6px);
+        border: 2px solid $white-color;
+      }
+    }
+    .client-name {
+      color: $bs-blue;
+      font-weight: 700;
+      margin-top: 28px;
+    }
+    .client-company {
+      color: $p-section-color;
+      font-size: 0.8em;
+    }
+  }
+}

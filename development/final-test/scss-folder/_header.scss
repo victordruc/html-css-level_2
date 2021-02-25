@@ -1,9 +1,9 @@
 .header {
-    background: linear-gradient(rgba($black-color, 0.6)), url(/images/bg-image-1.jpg);
+    background: linear-gradient(rgba($black-color, 0.6)), url(../images/bg-image-1.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    padding-bottom: 5em;
+    padding-bottom: 200px;
 }
 
 // Customizare navbar
@@ -65,5 +65,8 @@
     }
     button {
         padding: 15px 30px;
+        &:hover {
+            background-color: $btn-hover !important;
+        }
     }
 }

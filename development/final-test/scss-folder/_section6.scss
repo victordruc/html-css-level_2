@@ -1,0 +1,12 @@
+.section-6 {
+  background-color: $bg-section-color;
+  .owl-dot {
+    outline: none !important;
+    span {
+      background-color: rgba($bs-blue, 0.4) !important;
+    }
+  }
+  .active span {
+    background-color: $bs-blue !important;
+  }
+}

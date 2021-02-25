@@ -1,0 +1,22 @@
+.footer {
+    background-color: $bg-section-color;
+    padding: 75px 0;
+    img {
+        width: initial;
+    }
+    .copyright {
+        color: $p-section-color;
+        font-family: $font-family-source-sans-pro !important;
+        font-size: 1.2em;
+    }
+    i {
+        font-size: 1.8em;
+    }
+    a {
+        color: $p-section-color;
+        transition: .5s;
+        &:hover {
+            color: $btn-hover;
+        }
+    }
+}

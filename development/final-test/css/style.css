@@ -51,12 +51,12 @@ section {
 }
 
 .header {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6))), url(/images/bg-image-1.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.6)), url(/images/bg-image-1.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6))), url(../images/bg-image-1.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6)), url(../images/bg-image-1.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  padding-bottom: 5em;
+  padding-bottom: 200px;
 }
 
 .navbar {
@@ -120,6 +120,10 @@ section {
 
 .header-form button {
   padding: 15px 30px;
+}
+
+.header-form button:hover {
+  background-color: #0186ca !important;
 }
 
 .brief .brief-img {
@@ -239,5 +243,174 @@ section {
 .section-5 li i {
   color: #008ed6;
   margin-right: 4px;
+}
+
+.section-6 {
+  background-color: #f7f8fa;
+}
+
+.section-6 .owl-dot {
+  outline: none !important;
+}
+
+.section-6 .owl-dot span {
+  background-color: rgba(0, 142, 214, 0.4) !important;
+}
+
+.section-6 .active span {
+  background-color: #008ed6 !important;
+}
+
+.section-7 {
+  --dimensionBoxImg: 52px;
+}
+
+.section-7 .owl-dot {
+  outline: none !important;
+}
+
+.section-7 .item p {
+  padding: 40px 20px;
+  background-color: #f7f8fa;
+  position: relative;
+  font-style: italic;
+  border-bottom: 1px #e5e5e5 solid;
+}
+
+.section-7 .item p::after {
+  content: "";
+  background-color: #f7f8fa;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-bottom: 1px #e5e5e5 solid;
+  border-right: 1px #e5e5e5 solid;
+}
+
+.section-7 .item .single-list {
+  position: relative;
+  margin-top: 50px;
+}
+
+.section-7 .item .img-list {
+  width: var(--dimensionBoxImg);
+  height: var(--dimensionBoxImg);
+  background-color: #f7f8fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: calc(var(--dimensionBoxImg) / 2 * -1);
+  z-index: 2;
+}
+
+.section-7 .item .img-list img {
+  width: calc(var(--dimensionBoxImg) - 6px);
+  height: calc(var(--dimensionBoxImg) - 6px);
+  border: 2px solid #fff;
+}
+
+.section-7 .item .client-name {
+  color: #008ed6;
+  font-weight: 700;
+  margin-top: 28px;
+}
+
+.section-7 .item .client-company {
+  color: #727272;
+  font-size: 0.8em;
+}
+
+.section-8 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6))), url(../images/bg-image-2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6)), url(../images/bg-image-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.section-8 h2 {
+  color: #fff !important;
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-size: 1.5em;
+}
+
+.section-8 p {
+  color: #fff !important;
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 2em;
+}
+
+.section-8 button {
+  padding: 15px 30px;
+}
+
+.section-8 button:hover {
+  background-color: #0186ca !important;
+}
+
+.section-9 h2 {
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-size: 1.6em;
+}
+
+.section-9 a {
+  font-family: "Source Sans Pro", sans-serif !important;
+  color: #008ed6 !important;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.section-9 a:hover {
+  color: #323232 !important;
+}
+
+.footer {
+  background-color: #f7f8fa;
+  padding: 75px 0;
+}
+
+.footer img {
+  width: initial;
+}
+
+.footer .copyright {
+  color: #727272;
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-size: 1.2em;
+}
+
+.footer i {
+  font-size: 1.8em;
+}
+
+.footer a {
+  color: #727272;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.footer a:hover {
+  color: #0186ca;
 }
 /*# sourceMappingURL=style.css.map */

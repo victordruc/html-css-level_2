@@ -1,0 +1,16 @@
+.section-9 {
+  h2 {
+    font-family: $font-family-source-sans-pro !important;
+    font-size: 1.6em;
+  }
+  a {
+    font-family: $font-family-source-sans-pro !important;
+    color: $bs-blue !important;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .5s;
+    &:hover {
+        color: $h-section-color !important;
+    }
+  }
+}
