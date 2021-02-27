@@ -522,6 +522,7 @@ section {
   padding: 20px;
   font-family: "Source Sans Pro", sans-serif;
   left: -220px;
+  z-index: 20;
 }
 
 .switch-panel p {
