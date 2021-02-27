@@ -1,72 +1,134 @@
 .header {
-    background: linear-gradient(rgba($black-color, 0.6)), url(../images/bg-image-1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding-bottom: 200px;
+  background: linear-gradient(rgba($black-color, 0.6)),
+    url(../images/bg-image-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 200px;
 }
 
 // Customizare navbar
 
 .navbar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    .navbar-brand {
-        img {
-            padding-left: 4px;
-        };
+  position: fixed;
+  width: 100%;
+  top: -150px;
+  z-index: 100;
+  background-color: $white-color;
+  .navbar-brand {
+    img {
+      padding-left: 4px;
     }
+  }
 }
 
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
-    color: $bs-blue;
+.navbar-show {
+  animation: show-navbar 2s forwards;
 }
 
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: $bs-blue;
+.navbar-hide {
+  animation: hide-navbar 2s forwards;
+}
+
+.info-header {
+  padding: 48px 0;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: $bs-blue;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: $bs-blue;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    font-family: $font-family-raleway;
-    font-weight: 600;
-    font-size: 13px;
-    color: $bs-dark;
+  font-family: $font-family-raleway;
+  font-weight: 600;
+  font-size: 13px;
+  color: $bs-dark;
+}
+
+.navbar-nav {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 // customizare header
 .header-social {
-    font-size: 1.5em;
-    padding: 4px;
-    color: $white-color;
+  font-size: 1.5em;
+  padding: 4px;
+  color: $white-color;
 }
 
 .header-text {
-    color: $white-color;
-    ul {
-        list-style: none;
-        padding: 0;
-        i {
-            color: $bs-blue;
-            font-size: 1.5em;
-            margin-right: .5em;
-        }
+  color: $white-color;
+  h1 {
+    font-family: $font-family-source-sans-pro !important;
+    font-size: 3em;
+  }
+  p {
+    line-height: 1.8em;
+    color: rgba($white-color, 0.8);
+    font-size: 1.2em;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    i {
+      color: $bs-blue;
+      font-size: 2em;
+      margin-right: 0.5em;
     }
+  }
 }
 
 .header-form {
-    padding: 30px 24px 60px 24px;
-    background-color: rgba($black-color, 0.4);
-    legend {
-        color: $white-color;
-        padding-bottom: 30px;        
-        text-align: center;
-        font-size: 1.5em;
-        font-weight: 600;
+  padding: 30px 24px 60px 24px;
+  background-color: rgba($black-color, 0.4);
+  position: relative;
+  .blue-line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+  .form-control {
+    border: 1px solid $bs-blue;
+    border-left: 4px solid $bs-blue;
+  }
+  legend {
+    color: $white-color;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  button {
+    padding: 15px 30px;
+    &:hover {
+      background-color: $btn-hover !important;
     }
-    button {
-        padding: 15px 30px;
-        &:hover {
-            background-color: $btn-hover !important;
-        }
-    }
+  }
+}
+
+@keyframes show-navbar {
+  from {
+    top: -150px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes hide-navbar {
+  from {
+    top: 0;
+  }
+  to {
+    top: -150px;
+  }
 }

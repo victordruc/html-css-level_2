@@ -1,3 +1,7 @@
+body {
+  position: relative;
+}
+
 a:hover {
   color: #008ed6;
 }
@@ -62,18 +66,36 @@ section {
 .navbar {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: -150px;
+  z-index: 100;
+  background-color: #fff;
 }
 
 .navbar .navbar-brand img {
   padding-left: 4px;
 }
 
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+.navbar-show {
+  -webkit-animation: show-navbar 2s forwards;
+          animation: show-navbar 2s forwards;
+}
+
+.navbar-hide {
+  -webkit-animation: hide-navbar 2s forwards;
+          animation: hide-navbar 2s forwards;
+}
+
+.info-header {
+  padding: 48px 0;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
   color: #008ed6;
 }
 
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
   color: #008ed6;
 }
 
@@ -82,6 +104,18 @@ section {
   font-weight: 600;
   font-size: 13px;
   color: var(--bs-dark);
+}
+
+.navbar-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .header-social {
@@ -94,6 +128,17 @@ section {
   color: #fff;
 }
 
+.header-text h1 {
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-size: 3em;
+}
+
+.header-text p {
+  line-height: 1.8em;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2em;
+}
+
 .header-text ul {
   list-style: none;
   padding: 0;
@@ -101,13 +146,27 @@ section {
 
 .header-text ul i {
   color: #008ed6;
-  font-size: 1.5em;
-  margin-right: .5em;
+  font-size: 2em;
+  margin-right: 0.5em;
 }
 
 .header-form {
   padding: 30px 24px 60px 24px;
   background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.header-form .blue-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.header-form .form-control {
+  border: 1px solid #008ed6;
+  border-left: 4px solid #008ed6;
 }
 
 .header-form legend {
@@ -124,6 +183,42 @@ section {
 
 .header-form button:hover {
   background-color: #0186ca !important;
+}
+
+@-webkit-keyframes show-navbar {
+  from {
+    top: -150px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes show-navbar {
+  from {
+    top: -150px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@-webkit-keyframes hide-navbar {
+  from {
+    top: 0;
+  }
+  to {
+    top: -150px;
+  }
+}
+
+@keyframes hide-navbar {
+  from {
+    top: 0;
+  }
+  to {
+    top: -150px;
+  }
 }
 
 .brief .brief-img {
@@ -146,6 +241,11 @@ section {
 .section-3 i {
   color: #008ed6;
   font-size: 3.1em;
+}
+
+.section-3 h4 {
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-weight: 600 !important;
 }
 
 .section-4 {
@@ -412,5 +512,199 @@ section {
 
 .footer a:hover {
   color: #0186ca;
+}
+
+.switch-panel {
+  position: fixed;
+  top: 150px;
+  background-color: #fff;
+  width: 220px;
+  padding: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+  left: -220px;
+}
+
+.switch-panel p {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+  border-top: 1px dotted #e5e5e5;
+  border-bottom: 1px dotted #e5e5e5;
+}
+
+.switch-panel a {
+  text-decoration: none;
+  color: #727272;
+  font-size: 0.9em;
+}
+
+.switch-panel a:hover {
+  color: #0186ca;
+}
+
+.switch-panel .list-layout li:first-of-type {
+  font-weight: 700;
+}
+
+.switch-panel .list-layout li:first-of-type a {
+  color: #008ed6;
+  font-size: 1em;
+}
+
+.switch-panel .list-colors li {
+  width: 35px;
+  height: 35px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.switch-panel .list-colors li a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.switch-panel .list-colors li:nth-child(1) {
+  background-color: #008ed6;
+}
+
+.switch-panel .list-colors li:nth-child(1):hover {
+  background-color: rgba(0, 142, 214, 0.8);
+}
+
+.switch-panel .list-colors li:nth-child(2) {
+  background-color: #8600c8;
+}
+
+.switch-panel .list-colors li:nth-child(2):hover {
+  background-color: rgba(134, 0, 200, 0.8);
+}
+
+.switch-panel .list-colors li:nth-child(3) {
+  background-color: #0196a7;
+}
+
+.switch-panel .list-colors li:nth-child(3):hover {
+  background-color: rgba(1, 150, 167, 0.8);
+}
+
+.switch-panel .list-colors li:nth-child(4) {
+  background-color: #ea8825;
+}
+
+.switch-panel .list-colors li:nth-child(4):hover {
+  background-color: rgba(234, 136, 37, 0.8);
+}
+
+.switch-panel .list-colors li:nth-child(5) {
+  background-color: #6b798f;
+}
+
+.switch-panel .list-colors li:nth-child(5):hover {
+  background-color: rgba(107, 121, 143, 0.8);
+}
+
+.switch-panel .list-colors li:nth-child(6) {
+  background-color: #00ab66;
+}
+
+.switch-panel .list-colors li:nth-child(6):hover {
+  background-color: rgba(0, 171, 102, 0.8);
+}
+
+.switch-panel .list-colors li:nth-child(7) {
+  background-color: #e5c41a;
+}
+
+.switch-panel .list-colors li:nth-child(7):hover {
+  background-color: rgba(229, 196, 26, 0.8);
+}
+
+.switch-panel .list-colors li:nth-child(8) {
+  background-color: #f25454;
+}
+
+.switch-panel .list-colors li:nth-child(8):hover {
+  background-color: rgba(242, 84, 84, 0.8);
+}
+
+.switch-panel .switch-info {
+  color: #ccc;
+  font-weight: 400;
+  font-size: 0.9em;
+  text-transform: none;
+  margin-right: 10px;
+  border: none;
+}
+
+.switch-panel .toogle-switch {
+  position: absolute;
+  background-color: #fff;
+  font-size: 1.5em;
+  padding: 8px 12px;
+  top: 0;
+  right: -46px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-box-shadow: inset 0.1rem 0 0.1rem rgba(0, 0, 0, 0.15) !important;
+          box-shadow: inset 0.1rem 0 0.1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.switch-panel .toogle-switch a {
+  color: #000;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.switch-panel .toogle-switch a:hover {
+  color: #0186ca;
+}
+
+.switch-panel-show {
+  -webkit-animation: showPanel 2s forwards;
+          animation: showPanel 2s forwards;
+}
+
+.switch-panel-hide {
+  -webkit-animation: hidePanel 2s forwards;
+          animation: hidePanel 2s forwards;
+}
+
+@-webkit-keyframes showPanel {
+  from {
+    left: -220px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes showPanel {
+  from {
+    left: -220px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes hidePanel {
+  from {
+    left: 0;
+  }
+  to {
+    left: -220px;
+  }
+}
+
+@keyframes hidePanel {
+  from {
+    left: 0;
+  }
+  to {
+    left: -220px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
